@@ -1,0 +1,9 @@
+instance: 4x11_T30
+agent 1: sum=120 MMS=30 (partitions enumerated: 145750)
+agent 2: sum=120 MMS=30 (partitions enumerated: 145750)
+agent 3: sum=120 MMS=30 (partitions enumerated: 145750)
+agent 4: sum=120 MMS=30 (partitions enumerated: 145750)
+allocations enumerated: 4194304
+MMS allocations: 0
+max over allocations of min_i v_i(A_i): 29
+VERDICT: NO MMS ALLOCATION

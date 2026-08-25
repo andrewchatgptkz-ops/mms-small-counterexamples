@@ -1,0 +1,14 @@
+Exact MMS calculation by all unordered 4-partitions
+agent 1: MMS=30, partitions checked=145750, witness=((1, 2, 3), (4, 5, 6), (7, 8), (9, 10, 11))
+agent 2: MMS=30, partitions checked=145750, witness=((1, 2, 3), (4, 5, 6), (7, 8), (9, 10, 11))
+agent 3: MMS=30, partitions checked=145750, witness=((1, 7, 9), (2, 4, 8), (3, 6, 11), (5, 10))
+agent 4: MMS=30, partitions checked=145750, witness=((1, 7, 9), (2, 4, 8), (3, 6, 11), (5, 10))
+
+Complete-allocation enumeration
+allocations checked=4194304 (=4^11)
+MMS allocations=0
+maximum over allocations of min_i v_i(A_i)=29
+one maximizing assignment=(0, 0, 0, 1, 1, 1, 2, 2, 3, 3, 3)
+utilities there=(30, 30, 33, 29)
+
+VERIFIED: MMS=(30,30,30,30), and no MMS allocation exists.

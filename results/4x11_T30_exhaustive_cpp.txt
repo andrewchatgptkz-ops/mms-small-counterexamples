@@ -1,0 +1,5 @@
+MMS: 30 30 30 30
+allocations enumerated: 4194304
+MMS allocations: 0
+max-min: 29
+VERDICT: NO MMS ALLOCATION

@@ -1,0 +1,6 @@
+minimal R-threshold bundles: 54
+minimal C-threshold bundles: 54
+disjoint R-pairs: 448
+disjoint C-pairs: 436
+four-way compatible choices: 0
+VERIFIED: no two R-threshold bundles and two C-threshold bundles can be pairwise disjoint.

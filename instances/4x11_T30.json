@@ -1,0 +1,3 @@
+{"name":"4x11_T30","agents":4,"goods":11,"T":30,
+ "note":"Main result. Agents 1-2 share row R, agents 3-4 share row C. MMS=(30,30,30,30), no MMS allocation, max-min=29.",
+ "valuations":[[7,12,11,8,6,16,21,9,1,28,1],[7,12,11,8,6,16,21,9,1,28,1],[6,10,13,10,4,15,23,10,1,26,2],[6,10,13,10,4,15,23,10,1,26,2]]}

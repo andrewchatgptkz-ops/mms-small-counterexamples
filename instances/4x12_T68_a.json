@@ -1,0 +1,3 @@
+{"name":"4x12_T68_a","agents":4,"goods":12,"T":68,
+ "note":"Intermediate: obtained by deleting one good from the FST 13-good construction and re-solving valuations by MILP. MMS=68, no MMS allocation, max-min=67.",
+ "valuations":[[35,32,32,28,26,24,24,23,19,16,9,4],[35,32,32,28,26,24,24,23,19,16,9,4],[33,32,32,27,26,24,24,20,20,16,10,8],[33,32,32,27,26,24,24,20,20,16,10,8]]}

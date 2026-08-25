@@ -1,0 +1,33 @@
+Exact MMS calculation by all unordered 4-partitions
+agent 1: MMS=30, partitions checked=145750
+  bundle 1: g1 g2 g3  value=30
+  bundle 2: g4 g5 g6  value=30
+  bundle 3: g7 g8  value=30
+  bundle 4: g9 g10 g11  value=30
+agent 2: MMS=30, partitions checked=145750
+  bundle 1: g1 g2 g3  value=30
+  bundle 2: g4 g5 g6  value=30
+  bundle 3: g7 g8  value=30
+  bundle 4: g9 g10 g11  value=30
+agent 3: MMS=30, partitions checked=145750
+  bundle 1: g1 g7 g9  value=30
+  bundle 2: g2 g4 g8  value=30
+  bundle 3: g3 g6 g11  value=30
+  bundle 4: g5 g10  value=30
+agent 4: MMS=30, partitions checked=145750
+  bundle 1: g1 g7 g9  value=30
+  bundle 2: g2 g4 g8  value=30
+  bundle 3: g3 g6 g11  value=30
+  bundle 4: g5 g10  value=30
+
+Complete-allocation enumeration
+allocations checked=4194304 (=4^11)
+MMS allocations=0
+maximum over allocations of min_i v_i(A_i)=29
+one maximizing allocation:
+  agent 1: g9 g10 g11  value=30
+  agent 2: g7 g8  value=30
+  agent 3: g4 g5 g6  value=29
+  agent 4: g1 g2 g3  value=29
+
+VERIFIED: MMS=(30,30,30,30), and no MMS allocation exists.

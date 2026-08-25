@@ -1,0 +1,3 @@
+{"name":"4x12_T68_b","agents":4,"goods":12,"T":68,
+ "note":"Intermediate variant of 4x12_T68_a (same row type, different column type). MMS=68, no MMS allocation, max-min=67.",
+ "valuations":[[35,32,32,28,26,24,24,23,19,16,9,4],[35,32,32,28,26,24,24,23,19,16,9,4],[33,32,32,28,25,23,23,22,20,16,11,7],[33,32,32,28,25,23,23,22,20,16,11,7]]}

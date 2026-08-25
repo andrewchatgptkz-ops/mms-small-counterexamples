@@ -1,0 +1,5 @@
+instance: 4x12_T68_b  T=68
+unlabeled 4-partitions enumerated: 611501
+survivors (all four W-sums >= T): 13
+survivors admitting a 2+2 assignment: 0
+VERDICT: NO MMS ALLOCATION (given MMS=T for all agents)
