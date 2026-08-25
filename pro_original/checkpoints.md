@@ -40,7 +40,7 @@ For this two-type profile, an MMS allocation exists exactly when one can choose 
 
 ## 4. First positive result: twelve goods
 
-A stochastic integer search over all simple 12-edge incidence patterns found a positive-integer instance with `T=60`:
+The contemporaneous run note says that a stochastic integer search over the family of simple 12-edge incidence patterns found a positive-integer instance with `T=60`:
 
 ```text
 R12 = 44 16  8 42 10 34  1 24  1 14 14 32
@@ -49,9 +49,11 @@ C12 = 46 19 11 40  6 37  1 20  1 12 13 34
 
 Two independent exhaustive checks gave MMS `(60,60,60,60)`, zero MMS allocations, and optimum common value 59.
 
+The vectors are retained, but the original source/log did not survive. In particular, the exact historical pattern order and the incidence orbit used for this 12-good hit cannot be recovered; four incidence assignments in two nonisomorphic orbits are compatible with the retained vectors. See Section 8.
+
 ## 5. Eleven goods
 
-The same search over simple 11-edge patterns found:
+The contemporaneous run note says that the analogous search over simple 11-edge patterns found:
 
 ```text
 R11(initial) = 15 22 23 16 13 31 39 21  1 55  4
@@ -59,7 +61,7 @@ C11(initial) =  9 21 25 19  4 33 50 20  1 56  2
 T = 60
 ```
 
-Exact verification gave zero MMS allocations and optimum common value 59.
+Exact verification gave zero MMS allocations and optimum common value 59. The original stochastic source/log is missing, but the 11-good incidence assignment is recoverable uniquely up to row/column relabeling from the witness groups retained in both simplification scripts; see Section 8.
 
 The integers were then simplified. For every complete allocation, one currently losing agent was selected. Keeping those loser choices fixed turns nonexistence into integer linear inequalities of the form
 
@@ -117,3 +119,50 @@ Because there are two identical row-type agents and two identical column-type ag
 - zero choices consisting of one row pair and one column pair whose four bundles are mutually disjoint.
 
 This is implemented independently in `verify_two_type_structure.py`.
+
+## 8. Provenance correction and reconstructed incidence-search supplement
+
+The original exploratory source cell/script for Sections 4–5 and its run log were not included in the first archive and could not be recovered from the surviving work files, temporary/history locations, or the retained conversation transcript. The archive therefore does **not** claim an exact historical reconstruction. These original-run fields remain unknown:
+
+- pseudorandom generator and seed, if a seeded generator was used;
+- labelled-pattern order and whether row/column-isomorphic patterns were collapsed;
+- degree or connectivity prefilters;
+- exact stochastic move, scalar energy, and acceptance schedule;
+- number of patterns visited before the first 11-good hit;
+- elapsed time to that hit.
+
+The only surviving top-level duration is `35m 18s` for the entire task, including literature work, failed FST coarsenings, search, simplification, and verification. It cannot be assigned to the incidence-search stage.
+
+What is recovered exactly is the search normal form and stopping condition from Section 3. If `M_R` and `M_C` are the inclusion-minimal threshold-`T` bundles for the two valuation types, form every unordered disjoint pair within `M_R` and within `M_C`. The exact packing score is the number of row-pairs and column-pairs whose two unions are disjoint. It is zero exactly when no MMS allocation exists for the two-row-agent/two-column-agent profile. The reconstruction computes this count with a subset-zeta transform.
+
+For the initial 11-good hit, the witness groups retained literally in `simplify_candidate11.py` and `policy_simplify.py` are
+
+```text
+rows: {g1,g2,g3} | {g4,g5,g6} | {g7,g8} | {g9,g10,g11}
+cols: {g1,g7,g9} | {g2,g4,g8} | {g5,g10} | {g3,g6,g11}.
+```
+
+Thus the labelled row-major pattern mask is `0xd3eb`, with canonical mask `0x37de` under independent row and column permutations. Deterministic replay of the initial `T=60` vectors gives 52 minimal row bundles, 38 minimal column bundles, 409 disjoint row pairs, 257 disjoint column pairs, and exact score zero.
+
+For the initial 12-good hit, the vectors determine one exact-60 row partition and four exact-60 column partitions. All four give simple 4×4 incidences, split between canonical masks `0x3def` and `0x37df`. No retained artifact identifies which of these two incidence orbits was used in the historical search.
+
+A complete deterministic inventory of the possible pattern universes is:
+
+```text
+m   all labelled   no empty row/col   min degree >=2   all orbits   nonempty orbits   min-degree-2 orbits
+11       4,368            4,272              2,304          21             19                  8
+12       1,820            1,812              1,428          16             14                 10
+```
+
+These are universe sizes, not counts of patterns historically visited before a hit.
+
+The supplement in `search_provenance/` contains:
+
+- `SEARCH_PROVENANCE_RECONSTRUCTION.md`, with a field-by-field recovered/derived/reconstructed account;
+- `original_run_metadata.json`, recording unknown original fields as `null` rather than guessing them;
+- `reconstructed_incidence_search.cpp`, a runnable C++17 reconstruction clearly marked non-original;
+- deterministic pattern-inventory and replay outputs;
+- `replay_initial_candidates.py`, an independent derivation of the 11-good incidence and all four 12-good possibilities.
+
+The reconstructed stochastic driver uses random positive compositions, sum-preserving transfers, `log(1+score)` annealing energy, and a geometric temperature schedule. Those are plausible implementation choices, not recovered historical facts. It requires an explicit seed and labels its logs `RECONSTRUCTION_NOT_HISTORICAL`. No new stochastic search was run while preparing this provenance supplement.
+

@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you refer to these instances, please cite them as below."
+title: "Four-agent MMS counterexamples with 11 and 12 goods"
+abstract: >-
+  An instance of fair division with 4 agents, 11 indivisible goods and additive
+  positive integer valuations in which no allocation gives every agent her
+  maximin share. Eleven goods is minimal for four agents, by Hummel (IJCAI 2023).
+  The instance also gives the upper bound alpha_4 <= 29/30 on the best guaranteed
+  MMS approximation for four agents, improving 67/68 from the 13-good
+  construction of Feige, Sapir and Tauber (WINE 2021). Established by exhaustive
+  enumeration, reproduced by three independent programs, with a 114-row
+  max-envelope certificate that can be checked by hand.
+authors:
+  - family-names: Alexandrov
+    given-names: Andrey
+    email: alexandrov.home@gmail.com
+date-released: 2026-08-26
+version: "1.1"
+repository-code: "https://github.com/andrewchatgptkz-ops/mms4-small-counterexamples"
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - fair division
+  - maximin share
+  - MMS
+  - indivisible goods
+  - counterexample
+references:
+  - type: article
+    title: "On Lower Bounds for Maximin Share Guarantees"
+    authors:
+      - family-names: Hummel
+        given-names: Halvard
+    year: 2023
+    notes: "IJCAI 2023; arXiv:2302.00264. Gives an MMS allocation whenever m <= n + 6 for n != 3, hence m <= 10 for four agents."
+  - type: conference-paper
+    title: "A tight negative example for MMS fair allocations"
+    authors:
+      - family-names: Feige
+        given-names: Uriel
+      - family-names: Sapir
+        given-names: Ariel
+      - family-names: Tauber
+        given-names: Laliv
+    year: 2021
+    notes: "WINE 2021; arXiv:2104.04977. Theorem 14 (strengthening Theorem 4) gives, for four agents, a 13-good instance with MMS 68 in which some agent gets at most 67."

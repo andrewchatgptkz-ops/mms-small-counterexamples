@@ -71,15 +71,28 @@ A third verifier, `verify_two_type_structure.py`, independently exploits the two
 
 Because all values are positive and the certified MMS is positive, allowing empty bundles in the definition of a partition cannot improve the MMS; the optimum partitions are nonempty.
 
+## Search-provenance supplement
+
+The original stochastic 4×4 incidence-search source and its historical run log were not retained. The archive now states this explicitly rather than inventing a seed, timing, or pattern count. It includes:
+
+- the exact recovered search normal form and zero/nonzero packing criterion;
+- deterministic enumeration of the possible 11- and 12-edge incidence-pattern universes;
+- exact replay of both initial `T=60` candidates;
+- the uniquely recovered 11-good incidence pattern;
+- all four incidence assignments compatible with the retained 12-good vectors, which lie in two nonisomorphic orbits;
+- a runnable C++ reconstruction whose stochastic policy is clearly marked nonhistorical and whose search mode requires an explicit seed.
+
+See `search_provenance/SEARCH_PROVENANCE_RECONSTRUCTION.md`. No new stochastic search was run for this provenance update.
+
 ## Files
 
-- `verify_mms_instance.cpp` - exact C++ verifier.
-- `verify_mms_instance.py` - independent exact Python verifier.
-- `verify_two_type_structure.py` - independent exact structural verifier.
-- `verification_output_cpp.txt`, `verification_output_python.txt`, and `verification_output_structure.txt` - captured outputs.
-- `checkpoints.md` - search provenance, intermediate failures, and the constraints used.
-- `search_provenance/` - retained integer-simplification scripts, intermediate verifiers, and solver logs.
-- `SHA256SUMS` - hashes of the archived text files.
+- `verify_mms_instance.cpp` — exact C++ verifier.
+- `verify_mms_instance.py` — independent exact Python verifier.
+- `verify_two_type_structure.py` — independent exact structural verifier.
+- `verification_output_cpp.txt`, `verification_output_python.txt`, and `verification_output_structure.txt` — captured outputs.
+- `checkpoints.md` — search history, intermediate failures, constraints, and the provenance correction.
+- `search_provenance/` — retained simplification files plus the marked reconstruction and deterministic replay of the missing incidence-search stage.
+- `SHA256SUMS` — hashes of all archived files except the checksum file itself.
 
 ## Scope of the claim
 

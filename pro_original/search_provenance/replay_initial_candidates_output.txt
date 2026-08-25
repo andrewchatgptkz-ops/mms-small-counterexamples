@@ -1,0 +1,39 @@
+11-good initial T=60
+  goods=11 target=60 totals=(240,240)
+  exact row T-partitions=1
+    {g1,g2,g3} | {g4,g5,g6} | {g7,g8} | {g9,g10,g11}
+  exact column T-partitions=1
+    {g1,g7,g9} | {g2,g4,g8} | {g3,g6,g11} | {g5,g10}
+  packing_stats={'minimal_row': 52, 'minimal_col': 38, 'row_pairs': 409, 'col_pairs': 257, 'compatible_row_pairs': 0, 'score': 0}
+  incidence_status=RECOVERED EXACTLY UP TO ROW/COLUMN LABEL PERMUTATIONS
+  The displayed labels below are the literal order retained in the simplification scripts.
+  good_coordinates=[('g1', 1, 1), ('g2', 1, 2), ('g3', 1, 4), ('g4', 2, 2), ('g5', 2, 3), ('g6', 2, 4), ('g7', 3, 1), ('g8', 3, 2), ('g9', 4, 1), ('g10', 4, 3), ('g11', 4, 4)]
+  pattern_mask=0xd3eb canonical_mask=0x37de
+
+12-good initial T=60
+  goods=12 target=60 totals=(240,240)
+  exact row T-partitions=1
+    {g1,g2} | {g3,g4,g5} | {g6,g7,g8,g9} | {g10,g11,g12}
+  exact column T-partitions=4
+    {g1,g7,g11} | {g2,g4,g9} | {g3,g6,g10} | {g5,g8,g12}
+    {g1,g7,g11} | {g2,g5,g9,g12} | {g3,g6,g10} | {g4,g8}
+    {g1,g9,g11} | {g2,g4,g7} | {g3,g6,g10} | {g5,g8,g12}
+    {g1,g9,g11} | {g2,g5,g7,g12} | {g3,g6,g10} | {g4,g8}
+  packing_stats={'minimal_row': 64, 'minimal_col': 65, 'row_pairs': 624, 'col_pairs': 669, 'compatible_row_pairs': 0, 'score': 0}
+  incidence_status=NOT UNIQUELY RECOVERABLE
+  Every pairing below is a simple 4x4 incidence assignment consistent with the retained vectors.
+    option=1 pattern_mask=0xdfe3 canonical_mask=0x3def
+      column_partition={g1,g7,g11} | {g2,g4,g9} | {g3,g6,g10} | {g5,g8,g12}
+      good_coordinates=[('g1', 1, 1), ('g2', 1, 2), ('g3', 2, 3), ('g4', 2, 2), ('g5', 2, 4), ('g6', 3, 3), ('g7', 3, 1), ('g8', 3, 4), ('g9', 3, 2), ('g10', 4, 3), ('g11', 4, 1), ('g12', 4, 4)]
+    option=2 pattern_mask=0x7fe3 canonical_mask=0x37df
+      column_partition={g1,g7,g11} | {g2,g5,g9,g12} | {g3,g6,g10} | {g4,g8}
+      good_coordinates=[('g1', 1, 1), ('g2', 1, 2), ('g3', 2, 3), ('g4', 2, 4), ('g5', 2, 2), ('g6', 3, 3), ('g7', 3, 1), ('g8', 3, 4), ('g9', 3, 2), ('g10', 4, 3), ('g11', 4, 1), ('g12', 4, 2)]
+    option=3 pattern_mask=0xdfe3 canonical_mask=0x3def
+      column_partition={g1,g9,g11} | {g2,g4,g7} | {g3,g6,g10} | {g5,g8,g12}
+      good_coordinates=[('g1', 1, 1), ('g2', 1, 2), ('g3', 2, 3), ('g4', 2, 2), ('g5', 2, 4), ('g6', 3, 3), ('g7', 3, 2), ('g8', 3, 4), ('g9', 3, 1), ('g10', 4, 3), ('g11', 4, 1), ('g12', 4, 4)]
+    option=4 pattern_mask=0x7fe3 canonical_mask=0x37df
+      column_partition={g1,g9,g11} | {g2,g5,g7,g12} | {g3,g6,g10} | {g4,g8}
+      good_coordinates=[('g1', 1, 1), ('g2', 1, 2), ('g3', 2, 3), ('g4', 2, 4), ('g5', 2, 2), ('g6', 3, 3), ('g7', 3, 2), ('g8', 3, 4), ('g9', 3, 1), ('g10', 4, 3), ('g11', 4, 1), ('g12', 4, 2)]
+  compatible assignments=4 distinct row/column orbits=2
+  Therefore the original 12-edge incidence orbit cannot be selected from retained data alone.
+REPLAY PASSED

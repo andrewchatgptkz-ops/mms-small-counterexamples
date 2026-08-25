@@ -1,0 +1,14 @@
+candidate=11-good initial T=60
+  incidence_status=recovered exactly from retained simplification scripts
+  goods=11 target=60 pattern_mask=0xd3eb canonical_mask=0x37de
+  row_values=[15,22,23,16,13,31,39,21,1,55,4] total=240
+  col_values=[9,21,25,19,4,33,50,20,1,56,2] total=240
+  row_witness_sums_ok=true col_witness_sums_ok=true
+  packing_stats={"minimal_row":52,"minimal_col":38,"row_pairs":409,"col_pairs":257,"compatible_row_pairs":0,"score":0}
+candidate=12-good initial T=60
+  incidence_status=inferred representative; original assignment not retained
+  goods=12 target=60 pattern_mask=0xdfe3 canonical_mask=0x3def
+  row_values=[44,16,8,42,10,34,1,24,1,14,14,32] total=240
+  col_values=[46,19,11,40,6,37,1,20,1,12,13,34] total=240
+  row_witness_sums_ok=true col_witness_sums_ok=true
+  packing_stats={"minimal_row":64,"minimal_col":65,"row_pairs":624,"col_pairs":669,"compatible_row_pairs":0,"score":0}

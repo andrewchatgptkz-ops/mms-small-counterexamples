@@ -1,0 +1,2 @@
+m=11 raw_labelled=4368 nonempty_rows_cols=4272 min_degree_2=2304 connected=4272 row_col_orbits_all=21 row_col_orbits_nonempty=19 row_col_orbits_min_degree_2=8
+m=12 raw_labelled=1820 nonempty_rows_cols=1812 min_degree_2=1428 connected=1812 row_col_orbits_all=16 row_col_orbits_nonempty=14 row_col_orbits_min_degree_2=10

@@ -1,0 +1,72 @@
+{
+  "provenance_status": "original incidence-search source and run log not recovered",
+  "original_source_retained": false,
+  "original_run_log_retained": false,
+  "original_rng": null,
+  "original_seed": null,
+  "original_pattern_order": null,
+  "original_symmetry_reduction": null,
+  "original_degree_prefilter": null,
+  "original_scalar_search_objective": null,
+  "original_patterns_tried_before_first_11_good_hit": null,
+  "original_elapsed_seconds_to_first_11_good_hit": null,
+  "whole_task_elapsed_note": "A surviving conversation-level duration says 35m 18s, but it covers the entire task and cannot be attributed to the incidence search.",
+  "recovered_exact_stopping_criterion": "zero compatible pair-of-pairs: two disjoint inclusion-minimal row bundles plus two disjoint inclusion-minimal column bundles, all mutually disjoint",
+  "recovered_11_good": {
+    "target": 60,
+    "row_values": [15, 22, 23, 16, 13, 31, 39, 21, 1, 55, 4],
+    "column_values": [9, 21, 25, 19, 4, 33, 50, 20, 1, 56, 2],
+    "rows_1_based": [[1, 2, 3], [4, 5, 6], [7, 8], [9, 10, 11]],
+    "columns_1_based": [[1, 7, 9], [2, 4, 8], [5, 10], [3, 6, 11]],
+    "labelled_pattern_mask_hex": "0xd3eb",
+    "canonical_pattern_mask_hex": "0x37de",
+    "packing_stats": {
+      "minimal_row_bundles": 52,
+      "minimal_column_bundles": 38,
+      "disjoint_row_pairs": 409,
+      "disjoint_column_pairs": 257,
+      "compatible_row_pairs": 0,
+      "score": 0
+    }
+  },
+  "recovered_12_good": {
+    "target": 60,
+    "row_values": [44, 16, 8, 42, 10, 34, 1, 24, 1, 14, 14, 32],
+    "column_values": [46, 19, 11, 40, 6, 37, 1, 20, 1, 12, 13, 34],
+    "incidence_assignment_status": "not uniquely recoverable",
+    "compatible_incidence_assignments": 4,
+    "compatible_canonical_pattern_masks_hex": ["0x3def", "0x37df"],
+    "packing_stats": {
+      "minimal_row_bundles": 64,
+      "minimal_column_bundles": 65,
+      "disjoint_row_pairs": 624,
+      "disjoint_column_pairs": 669,
+      "compatible_row_pairs": 0,
+      "score": 0
+    }
+  },
+  "derived_pattern_inventory": {
+    "11": {
+      "all_labelled": 4368,
+      "nonempty_rows_and_columns": 4272,
+      "minimum_degree_2": 2304,
+      "orbits_all": 21,
+      "orbits_nonempty": 19,
+      "orbits_minimum_degree_2": 8
+    },
+    "12": {
+      "all_labelled": 1820,
+      "nonempty_rows_and_columns": 1812,
+      "minimum_degree_2": 1428,
+      "orbits_all": 16,
+      "orbits_nonempty": 14,
+      "orbits_minimum_degree_2": 10
+    }
+  },
+  "reconstruction": {
+    "source": "reconstructed_incidence_search.cpp",
+    "historical_claim": false,
+    "example_seed_not_historical": 2026082611,
+    "note": "Search mode requires an explicit seed. The local moves, annealing schedule, pattern prefilter/order, and example seed are reconstructed choices."
+  }
+}
