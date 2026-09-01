@@ -1,0 +1,9 @@
+MMS: 29 29 29 29 29
+allocations enumerated: 1220703125
+MMS allocations: 0
+max-min: 28
+VERDICT: NO MMS ALLOCATION
+
+real	1m0.467s
+user	1m0.448s
+sys	0m0.000s

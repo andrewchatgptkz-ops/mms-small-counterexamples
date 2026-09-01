@@ -1,0 +1,6 @@
+MMS[agent 1] = 29
+MMS[agent 2] = 29
+MMS[agent 3] = 29
+MMS[agent 4] = 29
+MMS[agent 5] = 29
+max_A min_i v_i(A_i) over all 5^13 allocations (by DP) = 28

@@ -1,0 +1,4 @@
+q=29: minimal type-1 sets 99, minimal type-2 sets 90, disjoint 2-tuples 1746, disjoint 3-tuples 6145, compatible packings 0
+q=28: minimal type-1 sets 91, minimal type-2 sets 102, disjoint 2-tuples 1587, disjoint 3-tuples 9833, compatible packings 1072
+no allocation reaches MMS everywhere
+threshold 28 achievable: yes
