@@ -1,26 +1,30 @@
 cff-version: 1.2.0
 message: "If you refer to these instances, please cite them as below."
-title: "Small MMS counterexamples: 5 agents / 13 goods and 4 agents / 11 goods"
+title: "Small two-type counterexamples for maximin-share (MMS) fair division: 4, 5, 6 and 7 agents"
 abstract: >-
-  Instances of fair division with additive positive integer valuations in which
-  no allocation gives every agent her maximin share. The 5-agent, 13-good
-  instance has MMS 29 with best achievable minimum 28, giving the upper bound
-  alpha <= 28/29 on the largest alpha for which alpha-MMS allocations always
-  exist (any number of agents), improving 39/40 from the 3-agent, 9-good
-  instance of Feige, Sapir and Tauber (WINE 2021), and alpha_5 <= 28/29 for five
-  agents (previously 1 - 1/5^4 = 624/625). The 4-agent, 11-good instance has MMS
-  30 with best achievable minimum 29, giving alpha_4 <= 29/30 (previously
-  67/68); eleven goods is minimal for four agents, by Hummel (IJCAI 2023).
-  Established by exhaustive enumeration, reproduced by independent programs of
-  different design (literal enumeration and subset dynamic programming), with
-  compact per-instance certificates that can be checked by hand.
+  Instances of fair division of indivisible goods with additive positive integer
+  valuations in which no allocation gives every agent her maximin share (MMS).
+  Each instance has two agent types; the goods are cells of a sparse n x n grid
+  whose rows sum to T under one valuation and whose columns sum to T under the
+  other, so MMS = T for every agent. The series is 4 agents / 11 goods with
+  T = 30 (ratio 29/30), 5 agents / 13 goods with T = 29 (28/29), 6 agents /
+  15 goods with T = 28 (27/28) and 7 agents / 17 goods with T = 27 (26/27). The
+  7-agent instance gives the upper bound alpha <= 26/27 on the largest alpha for
+  which alpha-MMS allocations always exist, for any number of agents, improving
+  39/40 from the 3-agent, 9-good instance of Feige, Sapir and Tauber (WINE 2021);
+  the n-agent instances also improve the n-specific bounds 67/68 (n = 4) and
+  1 - 1/n^4 (n = 5, 6, 7). Eleven goods is minimal for four agents, by Hummel
+  (IJCAI 2023). Established by exact computation and reproduced by independently
+  written programs of different design (literal enumeration, subset dynamic
+  programming, packing certificates), with compact two-branch weight certificates
+  that can be checked by hand.
 authors:
   - family-names: Alexandrov
     given-names: Andrey
     email: alexandrov.home@gmail.com
-date-released: 2026-09-01
-version: "1.2"
-repository-code: "https://github.com/andrewchatgptkz-ops/mms4-small-counterexamples"
+date-released: 2026-09-02
+version: "1.3"
+repository-code: "https://github.com/andrewchatgptkz-ops/mms-small-counterexamples"
 license:
   - MIT
   - CC-BY-4.0
@@ -61,4 +65,13 @@ references:
       - family-names: Shahrezaei
         given-names: AmirMohammad
     year: 2026
-    notes: "SODA 2026; arXiv:2510.10423. Lower bound alpha >= 10/13."
+    notes: "SODA 2026, pages 2239-2290; arXiv:2510.10423. Lower bound alpha >= 10/13."
+  - type: article
+    title: "An FPTAS for 7/9-Approximation to Maximin Share Allocations"
+    authors:
+      - family-names: Huang
+        given-names: Xin
+      - family-names: Zhou
+        given-names: Shengwei
+    year: 2025
+    notes: "Preprint, arXiv:2511.13056 (17 November 2025). Lower bound alpha >= 7/9, improving 10/13."

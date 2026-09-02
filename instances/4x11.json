@@ -1,91 +1,112 @@
 {
- "name": "4x12_T60",
+ "name": "4x11",
  "agents": 4,
  "split": "2 agents with valuation R, 2 agents with valuation C",
- "goods": 12,
- "T": 60,
+ "goods": 11,
+ "T": 30,
  "R": [
-  44,
-  16,
+  7,
+  12,
+  11,
   8,
-  42,
-  10,
-  34,
+  6,
+  16,
+  21,
+  9,
   1,
-  24,
-  1,
-  14,
-  14,
-  32
+  28,
+  1
  ],
  "C": [
-  46,
-  19,
-  11,
-  40,
   6,
-  37,
-  1,
-  20,
-  1,
-  12,
+  10,
   13,
-  34
+  10,
+  4,
+  15,
+  23,
+  10,
+  1,
+  26,
+  2
  ],
  "rows_R_sum_T": [
   [
    1,
-   2
+   2,
+   3
   ],
   [
-   3,
    4,
-   5
+   5,
+   6
   ],
   [
-   6,
    7,
-   8,
-   9
+   8
   ],
   [
+   9,
    10,
-   11,
-   12
+   11
   ]
  ],
  "cols_C_sum_T": [
   [
    1,
    7,
-   11
+   9
   ],
   [
    2,
    4,
-   9
+   8
   ],
   [
    3,
    6,
-   10
+   11
   ],
   [
    5,
-   8,
-   12
+   10
   ]
  ],
  "MMS": [
-  60,
-  60,
-  60,
-  60
+  30,
+  30,
+  30,
+  30
  ],
- "best_min": 59,
- "ratio": "59/60",
- "best_allocation_1based": null,
- "best_allocation_utilities": null,
+ "best_min": 29,
+ "ratio": "29/30",
+ "best_allocation_1based": [
+  [
+   9,
+   10,
+   11
+  ],
+  [
+   7,
+   8
+  ],
+  [
+   4,
+   5,
+   6
+  ],
+  [
+   1,
+   2,
+   3
+  ]
+ ],
+ "best_allocation_utilities": [
+  30,
+  30,
+  29,
+  29
+ ],
  "found_by": "GPT-5.6 Pro, 2026-08-25/26",
  "status": "COMPUTED / Tier A (independently re-verified by Claude with separate code)"
 }
