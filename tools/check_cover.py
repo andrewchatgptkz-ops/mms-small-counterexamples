@@ -1,6 +1,10 @@
-import json, itertools
+import json, itertools, os
 R0=[8,15,4,9,1,17,4,23,9,1,17,24,3,11,16,22,5]; C0=[9,11,6,9,1,16,4,24,9,1,16,25,3,11,15,23,6]
-base='/home/claude/p16/P16S1/results/'
+base=os.environ.get("P16S1_RESULTS")
+if not base:
+    raise SystemExit("set P16S1_RESULTS to the results/ directory of the unpacked P16S1_final.tar.gz "
+                     "(sha256 643e59ac...; see PROVENANCE.md)")
+base=base.rstrip("/")+"/"
 c=json.load(open(base+'decrement_cover/certificate.json'))
 v=json.load(open(base+'decrement/variant_choices_zero_based.json'))
 packs=[p['packing'] for p in c['packings']]
