@@ -19,13 +19,19 @@ abstract: >-
   written programs of different design (literal enumeration, subset dynamic
   programming, packing certificates), with compact two-branch weight certificates
   that can be checked by hand (one branching good and two weightings for
-  n = 4 to 7; two branching goods and four leaves for n = 8).
+  n = 4 to 7; two branching goods and four leaves for n = 8). Two exact negative
+  results accompany the instances: 7 agents / 17 goods is locally optimal in
+  ratio (no first-order, integer-box or decrement perturbation does better), and
+  a computer-assisted theorem that every 5-agent, 12-good instance with at most
+  two valuation types admits an MMS allocation, so the two-type threshold for
+  five agents is exactly 13 goods and any 5-agent, 12-good counterexample needs
+  three or more valuation types.
 authors:
   - family-names: Alexandrov
     given-names: Andrey
     email: alexandrov.home@gmail.com
 date-released: 2026-09-05
-version: "1.5"
+version: "1.6"
 repository-code: "https://github.com/andrewchatgptkz-ops/mms-small-counterexamples"
 license:
   - MIT
