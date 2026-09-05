@@ -1,0 +1,187 @@
+{
+ "name": "8x19_T104",
+ "agents": 8,
+ "split": "4 agents with valuation R, 4 agents with valuation C",
+ "goods": 19,
+ "T": 104,
+ "R": [
+  28,
+  57,
+  19,
+  36,
+  5,
+  63,
+  15,
+  89,
+  36,
+  5,
+  63,
+  93,
+  11,
+  43,
+  61,
+  85,
+  19,
+  43,
+  61
+ ],
+ "C": [
+  31,
+  47,
+  23,
+  36,
+  3,
+  61,
+  15,
+  93,
+  37,
+  4,
+  61,
+  97,
+  11,
+  43,
+  56,
+  89,
+  25,
+  43,
+  57
+ ],
+ "rows_R_sum_T": [
+  [
+   1,
+   2,
+   3
+  ],
+  [
+   4,
+   5,
+   6
+  ],
+  [
+   7,
+   8
+  ],
+  [
+   9,
+   10,
+   11
+  ],
+  [
+   12,
+   13
+  ],
+  [
+   14,
+   15
+  ],
+  [
+   16,
+   17
+  ],
+  [
+   18,
+   19
+  ]
+ ],
+ "cols_C_sum_T": [
+  [
+   1,
+   4,
+   9
+  ],
+  [
+   5,
+   10,
+   12
+  ],
+  [
+   2,
+   19
+  ],
+  [
+   3,
+   15,
+   17
+  ],
+  [
+   8,
+   13
+  ],
+  [
+   6,
+   14
+  ],
+  [
+   7,
+   16
+  ],
+  [
+   11,
+   18
+  ]
+ ],
+ "MMS": [
+  104,
+  104,
+  104,
+  104,
+  104,
+  104,
+  104,
+  104
+ ],
+ "best_min": 103,
+ "ratio": "103/104",
+ "best_allocation_1based": [
+  [
+   4,
+   5,
+   6
+  ],
+  [
+   9,
+   10,
+   11
+  ],
+  [
+   14,
+   15
+  ],
+  [
+   18,
+   19
+  ],
+  [
+   3,
+   8
+  ],
+  [
+   12,
+   13
+  ],
+  [
+   7,
+   16
+  ],
+  [
+   1,
+   2,
+   17
+  ]
+ ],
+ "best_allocation_utilities": [
+  104,
+  104,
+  104,
+  104,
+  116,
+  108,
+  104,
+  103
+ ],
+ "construction": "4*(score-2 profile at T=26 on the g11-subdivision of 7x17) + (hR, hC) with hR = 0 1 -1 0 1 -1 -1 1 0 1 -1 1 -1 -1 1 1 -1 -1 1, hC = -1 -1 -1 0 -1 1 -1 1 1 0 1 1 -1 -1 0 1 1 -1 1; for every integer K >= 4, K*profile + (hR,hC) has MMS 26K and best min 26K-1",
+ "certificate": "depth 2: branch on (g1, g2), four leaves RR/RC/CR/CC, see certificates/weight_certificates.md and verify/verify_certificate.py",
+ "found_by": "GPT-6 Pro, 2026-09-05 (theory session P17, depth-2 certificate synthesis by MILP over tied subsets)",
+ "status": "COMPUTED / Tier A (independently re-verified by Claude with separate code: subset DP max-min 103 and MMS 104, packing certificate 0 pairs at q=104 / 56 tuple pairs at q=103, all four leaf certificates by brute force over 2^19 subsets)",
+ "consequences": "alpha_8 <= 103/104 (before: 1 - 1/8^4 from FST); f(8) <= 18 (existence known for m <= 15, Hummel Thm 3). Does NOT improve the general bound 26/27."
+}

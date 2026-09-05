@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Human-auditable non-existence certificates for the two-type grid MMS counterexamples
-(4 agents x 11 goods, 5 x 13, 6 x 15).  Standard library only.
+(4 agents x 11 goods, 5 x 13, 6 x 15, 7 x 17, 4 x 12) and the depth-2 certificate of the 8 x 19 instance.
+Standard library only.
 
 Setting.  a agents value goods by R, b agents by C (n = a+b).  Rows of the grid sum to T under R,
 columns sum to T under C, so MMS = T for everyone.  An allocation giving everyone >= T exists iff
@@ -18,6 +19,11 @@ R-agent or to a C-agent.
     > sum(w): contradiction.
   Case C (g* with a C-agent): symmetric, with R-sets avoiding g*.
 This script checks the three conditions of each case by brute force over ALL 2^m subsets.
+
+Depth-2 certificate (8 x 19).  Branch on TWO goods p, q; a leaf XY in {R,C}^2 says p goes to a type-X
+agent and q to a type-Y agent.  In leaf XY no C-bundle contains a good given to R and no R-bundle contains
+a good given to C.  Each leaf has its own weights w and quotas alpha, beta with the same three conditions;
+four valid leaves prove that no allocation gives everyone >= T.
 """
 import sys
 
@@ -68,6 +74,39 @@ CHAIN = dict(
     caseC=dict(w=[45,80,38,64,16,96,38,138,64,16,96,141,35,80,96,137,39], ab={'5x13':(176,172),'6x15':(176,172),'7x17':(176,173)}),
 )
 
+# Depth-2 certificate for the 8-agent instance (GPT-6 Pro, 2026-09-05; verified by Claude).  Branch on (g1, g2).
+DEPTH2 = {
+  '8x19_T104': dict(a=4, b=4, T=104,
+      R=[28,57,19,36,5,63,15,89,36,5,63,93,11,43,61,85,19,43,61],
+      C=[31,47,23,36,3,61,15,93,37,4,61,97,11,43,56,89,25,43,57],
+      branch=(1, 2),
+      leaves=dict(
+        RR=dict(w=[6,11,6,7,3,13,6,18,7,3,13,18,6,11,12,18,6,11,12], alpha=23, beta=24),
+        RC=dict(w=[2,4,2,3,1,5,2,7,3,1,5,7,2,4,5,7,2,4,5], alpha=9, beta=9),
+        CR=dict(w=[17,31,15,25,6,37,14,54,25,6,37,55,13,31,37,53,15,31,37], alpha=68, beta=67),
+        CC=dict(w=[15,26,13,22,5,33,12,48,22,5,33,49,11,27,33,47,13,27,33], alpha=60, beta=59))),
+}
+
+def check_leaf(inst, leaf, cert):
+    R, C, T, a, b = inst['R'], inst['C'], inst['T'], inst['a'], inst['b']
+    m = len(R); p, q = (g - 1 for g in inst['branch'])
+    w, alpha, beta = cert['w'], cert['alpha'], cert['beta']
+    assert len(w) == m and min(w) >= 0
+    forbR = sum(1 << g for g, t in zip((p, q), leaf) if t == 'C')   # goods given to C: no R-bundle contains them
+    forbC = sum(1 << g for g, t in zip((p, q), leaf) if t == 'R')   # goods given to R: no C-bundle contains them
+    minR = minC = None
+    for S in range(1 << m):
+        rs = cs = ws = 0
+        for g in range(m):
+            if (S >> g) & 1:
+                rs += R[g]; cs += C[g]; ws += w[g]
+        if rs >= T and not (S & forbR):
+            minR = ws if minR is None else min(minR, ws)
+        if cs >= T and not (S & forbC):
+            minC = ws if minC is None else min(minC, ws)
+    ok = (minR >= alpha) and (minC >= beta) and (a*alpha + b*beta > sum(w))
+    return ok, minR, minC, sum(w), a*alpha + b*beta
+
 def check_case(inst, case, side):
     R, C, T, a, b = inst['R'], inst['C'], inst['T'], inst['a'], inst['b']
     m = len(R); gs = inst['gstar'] - 1
@@ -111,3 +150,13 @@ if __name__ == '__main__':
                 print(f'  case {side} {name}: alpha={al} beta={be} min w(R)={mr} min w(C)={mc} sum={sw} < {need}: {"OK" if ok else "FAIL"}')
                 allok &= ok
         print('CHAIN CERTIFICATES VALID' if allok else 'CHAIN FAILED')
+        for name, inst in DEPTH2.items():
+            R, C, T, a, b = inst['R'], inst['C'], inst['T'], inst['a'], inst['b']
+            assert sum(R) == (a+b)*T and sum(C) == (a+b)*T
+            print(f'Depth-2 certificate {name}: n={a+b} ({a}+{b}), m={len(R)}, T={T}, branching goods g{inst["branch"][0]}, g{inst["branch"][1]}')
+            for leaf, cert in inst['leaves'].items():
+                ok, mr, mc, sw, need = check_leaf(inst, leaf, cert)
+                print(f'  leaf {leaf}: min w(R-set)={mr} (>= alpha={cert["alpha"]}), min w(C-set)={mc} (>= beta={cert["beta"]}), '
+                      f'sum w={sw} < {need}: {"OK" if ok else "FAIL"}')
+                allok &= ok
+        print('DEPTH-2 CERTIFICATE VALID' if allok else 'DEPTH-2 FAILED')

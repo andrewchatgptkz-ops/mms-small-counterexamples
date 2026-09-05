@@ -8,22 +8,24 @@ abstract: >-
   whose rows sum to T under one valuation and whose columns sum to T under the
   other, so MMS = T for every agent. The series is 4 agents / 11 goods with
   T = 30 (ratio 29/30), 5 agents / 13 goods with T = 29 (28/29), 6 agents /
-  15 goods with T = 28 (27/28) and 7 agents / 17 goods with T = 27 (26/27). The
+  15 goods with T = 28 (27/28) and 7 agents / 17 goods with T = 27 (26/27), with
+  an 8-agent / 19-good instance at T = 104 (103/104) on the same skeleton. The
   7-agent instance gives the upper bound alpha <= 26/27 on the largest alpha for
   which alpha-MMS allocations always exist, for any number of agents, improving
   39/40 from the 3-agent, 9-good instance of Feige, Sapir and Tauber (WINE 2021);
   the n-agent instances also improve the n-specific bounds 67/68 (n = 4) and
-  1 - 1/n^4 (n = 5, 6, 7). Eleven goods is minimal for four agents, by Hummel
+  1 - 1/n^4 (n = 5, 6, 7, 8). Eleven goods is minimal for four agents, by Hummel
   (IJCAI 2023). Established by exact computation and reproduced by independently
   written programs of different design (literal enumeration, subset dynamic
   programming, packing certificates), with compact two-branch weight certificates
-  that can be checked by hand.
+  that can be checked by hand (one branching good and two weightings for
+  n = 4 to 7; two branching goods and four leaves for n = 8).
 authors:
   - family-names: Alexandrov
     given-names: Andrey
     email: alexandrov.home@gmail.com
 date-released: 2026-09-05
-version: "1.4"
+version: "1.5"
 repository-code: "https://github.com/andrewchatgptkz-ops/mms-small-counterexamples"
 license:
   - MIT

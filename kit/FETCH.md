@@ -16,6 +16,7 @@ If `git` cannot reach GitHub from the sandbox, try `curl -L https://github.com/a
 - `pro_original_5x13/` — the 5×13 search machine (pattern enumeration for 5×5 grids, stochastic search with exact packing score, CEGIS on HiGHS), archive `.tar.zst`; unpack with `zstd -d` or Python `zstandard`.
 - `pro_original_6x15/`, `pro_original_7x17/` — the 6×15 and 7×17 archives (the 7×17 one contains the packing-oracle CEGIS with indicator formulation, invocation-record tooling, and the 6×15 archive verbatim).
 - `pro_original/` — the 4×11 package (search code reconstructed, verifiers original).
+- `pro_original_8x19_theory/` — the GPT-6 Pro theory session snapshot (gadget signatures, depth-2 certificate synthesis, the 8×19 T = 104 instance, invariants).
 
 ## Rules that apply to every computation (from §8 of the dossier)
 Snapshot the working tree to /mnt/data after every stage; one prompt = one stage; the newest snapshot is always a complete deliverable (REPORT.md, REPRODUCE.md, MANIFEST.sha256, invocation records); size-based guards, not time; every producing script on disk verbatim with seeds, logs and the shell invocation recorded before the worker starts; independent verification (two subset DPs, packing certificate, sanity checks) before any instance is reported.
