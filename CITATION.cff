@@ -22,8 +22,8 @@ authors:
   - family-names: Alexandrov
     given-names: Andrey
     email: alexandrov.home@gmail.com
-date-released: 2026-09-02
-version: "1.3"
+date-released: 2026-09-05
+version: "1.4"
 repository-code: "https://github.com/andrewchatgptkz-ops/mms-small-counterexamples"
 license:
   - MIT

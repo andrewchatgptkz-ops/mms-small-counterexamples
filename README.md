@@ -22,7 +22,7 @@ Before this work the best known upper bound was 39/40 (Feige, Sapir, Tauber, WIN
 | 6 | 15 | 28 | 27 | 27/28 | 1 − 1/6⁴ | f(6) ≤ 14 |
 | 7 | 17 | 27 | 26 | 26/27 | 1 − 1/7⁴ | f(7) ≤ 16 |
 
-All four new instances have two agent types (valuations R and C), goods are cells of a sparse n×n grid, every row sums to T under R and every column to T under C, so MMS = T for everyone by construction. The incidence graphs (rows and columns as vertices, goods as edges) are subdivisions of the triangular prism; each instance for n = 5, 6, 7 is obtained from the previous one by subdividing one edge and adjusting values (m = 2n + 3, T = 34 − n for n = 4…7). Details in `FAMILY.md`. The recursion is a set of four data points, not a proven construction for all n; at n = 8 the naive step fails and the existence of an 8-agent instance with ratio 25/26 is open.
+All four new instances follow the two-type row/column paradigm of Feige–Sapir–Tauber's general construction (two agent types with valuations R and C, goods as cells of a sparse n×n grid, every row summing to T under R and every column to T under C, so MMS = T for everyone by construction), but on a much sparser skeleton with far fewer goods. The incidence graphs (rows and columns as vertices, goods as edges) are subdivisions of the triangular prism; each instance for n = 5, 6, 7 is obtained from the previous one by subdividing one edge and adjusting values (m = 2n + 3, T = 34 − n for n = 4…7). Details in `FAMILY.md`. The recursion is a set of four data points, not a proven construction for all n; at n = 8 the naive step fails and the existence of an 8-agent instance with ratio 25/26 is open.
 
 ## Contents
 
@@ -36,8 +36,9 @@ All four new instances have two agent types (valuations R and C), goods are cell
 - `certificates/` — packing counts and weight certificates, with the verification recipe.
 - `FAMILY.md` — the structure of the family, the chain certificate, the rigidity facts, and the status of n = 8.
 - `PROVENANCE.md` — who found what and when, archive hashes, what was lost, what is not established.
+- `pro_original*/` — the unmodified search archives of the GPT-5.6 Pro sessions (4×11 package; 5×13, 6×15, 7×17 `.tar.zst` with SHA-256).
+- `kit/` — everything a model session needs to continue the work (dossier, environment lessons, fetch instructions, packing oracle).
 - `results/`, `legacy/` — material from releases v1.0–v1.2, kept for reference: the run logs of the older verifiers, their instance files in the older JSON schema (including the two intermediate 4×12 instances with T = 68 that the family above does not contain), and the verifiers themselves.
-- `pro_original/`, `pro_original_5x13/` — provenance material published with the earlier releases: the explicitly marked reconstruction of the lost 4×11 search code, and the 5×13 search archive whose sha256 is pinned in `PROVENANCE.md`.
 
 ## How the certificates work
 

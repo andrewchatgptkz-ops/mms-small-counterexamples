@@ -1,0 +1,55 @@
+# Dossier: the MMS approximation constant project (state as of 2026-09-02)
+
+Prepared for an outside review. Everything below is verified unless marked otherwise. This repository is the single source of truth: it contains the instances, three independent verifiers (`verify/run_all.sh`, ~10 s), the certificates and the original search archives. See `kit/FETCH.md` for how to fetch it.
+
+## 1. The question
+Fair division of m indivisible goods among n agents with additive valuations. MMS_i = max over partitions of all goods into n bundles of the minimum bundle value (agent i's own valuation). An MMS allocation gives every agent ≥ MMS_i; such allocations do not always exist. The constant α = the largest ratio such that an allocation with v_i(A_i) ≥ α·MMS_i for all i always exists. Known: 10/13 ≤ α (Heidari–Kaviani–Seddighin–Shahrezaei, SODA 2026; 7/9 claimed in a preprint, Huang–Zhou arXiv:2511.13056), and α ≤ 39/40 (Feige–Sapir–Tauber, WINE 2021, 3 agents × 9 goods). Per-n bounds before this project: α₃ ≤ 39/40 (and α₃ ≥ 11/12, Feige–Norkin), α₄ ≤ 67/68 (FST, 13 goods), αₙ ≤ 1 − 1/n⁴ for n ≥ 5 (FST). Existence: MMS allocations exist for m ≤ n+5 (FST; Hsu), m ≤ n+6 for n ≠ 3 (Hummel 2023), m = n+7 for n ≥ 8 (Hummel, Thm 3). Let f(n) = the largest m such that all n-agent instances with m goods have an MMS allocation.
+
+## 2. What we found (all computer-found, each independently re-verified by separately written code)
+Two-type grid instances: a agents with valuation R, b with valuation C; goods are cells of a sparse n×n grid; rows sum to T under R, columns to T under C, so MMS = T for everyone; an allocation ≥ T exists iff a disjoint R-sets ≥ T and b disjoint C-sets ≥ T can be packed.
+
+| n | m | split | T | best min | ratio | consequence |
+|---|---|---|---|---|---|---|
+| 4 | 11 | 2+2 | 30 | 29 | 29/30 | α₄ ≤ 29/30; f(4) = 10 exactly (with Hummel) |
+| 5 | 13 | 2+3 | 29 | 28 | 28/29 | α₅ ≤ 28/29; f(5) ≤ 12 |
+| 6 | 15 | 3+3 | 28 | 27 | 27/28 | α₆ ≤ 27/28; f(6) ≤ 14 |
+| 7 | 17 | 3+4 | 27 | 26 | 26/27 | **α ≤ 26/27** (general bound; was 39/40 since 2021); f(7) ≤ 16 |
+
+Values (goods g1…gm; R for the R-agents, C for the C-agents):
+- 4×11: R = 7 12 11 8 6 16 21 9 1 28 1; C = 6 10 13 10 4 15 23 10 1 26 2. Rows {1,2,3}|{4,5,6}|{7,8}|{9,10,11}; columns {1,7,9}|{2,4,8}|{3,6,11}|{5,10}.
+- 5×13: R = 8 16 5 10 1 18 5 24 9 2 18 25 4; C = 9 12 7 10 1 15 7 26 10 1 17 27 3. Rows {1,2,3}|{4,5,6}|{7,8}|{9,10,11}|{12,13}; columns {1,4,9}|{5,10,12}|{2,11}|{3,6,7}|{8,13}.
+- 6×15: R = 7 16 5 9 1 18 4 24 9 1 18 25 3 11 17; C = 8 12 6 10 1 16 7 25 10 1 16 26 3 12 15. Rows … |{14,15}; columns {1,4,9}|{5,10,12}|{2,11}|{3,7,15}|{8,13}|{6,14}.
+- 7×17: R = 8 15 4 9 1 17 4 23 9 1 17 24 3 11 16 22 5; C = 9 11 6 9 1 16 4 24 9 1 16 25 3 11 15 23 6. Rows … |{16,17}; columns {1,4,9}|{5,10,12}|{2,11}|{3,15,17}|{8,13}|{6,14}|{7,16}.
+
+Also: Gap(3,10) = 1/40 — no 3-agent 10-good instance beats FST's 39/40 (normal form → 20 785 isomorphism classes of witness-partition triples → Z3, all UNSAT below b = 40; reproduced independently). And an all-positive 4×12 with T = 60.
+
+Verification: subset DP (exact max over allocations of the minimum utility, exact MMS), packing certificates (counts of minimal sets, disjoint tuples, compatible pairs — zero at q = T, positive at q = T−1), literal enumeration of all n^m allocations for 4×11, 5×13 and 6×15 (6^15 ≈ 4.7·10¹¹ in shards), and the weight certificates below.
+
+## 3. Structure
+- Incidence graphs (rows and columns as vertices, goods as edges): K3,3 for FST's 3×9; subdivisions of the triangular prism (two triangles + a perfect matching) for n = 4…7. Only triangle edges get subdivided. m = 2n+3, T = 34 − n, best min = 33 − n for n = 4…7 — four data points, no proof.
+- The step 5 → 6 is literally "subdivide one edge (g6 = (r2,c4)) through a new row and column with parameters (12,12), then decrement one good per row (R) and one per column (C)". Sensitivity: of 13 edges × 28×28 parameters × 3 splits, exactly one subdivision preserves non-existence; of 46 656 decrement patterns, 21 work. The step 6 → 7 needed a small CEGIS repair of values (L1 = 6 in R, 4 in C) — the literal operator fails (all 10 935 T-preserving subdivisions and all 70 087 680 subdivision+decrement pairs keep a packing).
+- Human-auditable certificates: fix good g1 (the only column with no heavy good: c1 = {g1,g4,g9}). Case R (g1 to an R-agent): integer weights w with every R-set ≥ T weighing ≥ α, every C-set ≥ T avoiding g1 weighing ≥ β, and a·α + b·β > Σw — contradiction with disjointness. Case C symmetric. A pure weighting without the disjunction is impossible: the fractional packing (half rows + half columns) has value exactly 1. Example, 6×15 case R: w = 5 11 6 7 3 12 6 17 7 3 12 17 6 11 11, α = 22, β = 23, Σw = 134 < 135.
+- Chain certificate: the SAME weight vector serves n = 5, 6, 7 (case R: 5 11 6 7 3 12 6 17 7 3 12 17 6 11 11 17 6 with α = 22, β = 23; each step adds two goods whose weights sum to the new agent's quota; the margin is exactly 1 every time). Rigidity: rows weigh exactly α (or α+1), columns without g1 exactly β, column c1 weighs α − a; row excesses sum to b − 1; with α = β no certificate can exist at all. Necessary condition on any two-type instance: at most b − 1 rows may have C-sum ≥ T and at most a − 1 columns R-sum ≥ T (else whole rows/columns give an allocation); all four instances satisfy it with equality.
+
+## 4. n = 8: what is proved and what is open
+- The fixed chain does not extend to n = 8 (any single subdivision, both splits 4+4 and 3+5): proved by LP infeasibility / exact CEGIS. Reason: with a new R-agent the column weights (all exactly β = 23) cannot accommodate a subdivision except in column c1, and those cases are LP-infeasible.
+- Best known 8×19 profile (subdivision of g11, T = 26, split 4+4): R = 7 14 5 9 1 16 4 22 9 1 16 23 3 11 15 21 5 11 15; C = 8 12 6 9 1 15 4 23 9 1 15 24 3 11 14 22 6 11 14; exactly two surviving packings (four whole rows to the C-agents; four whole columns to the C-agents). One-sided repair (change only R or only C) is UNSAT. The L1 ≤ 6 ball is empty (exhaustive). With the hard-row/hard-column constraints, the L1 ≤ 20 box on this graph is UNSAT (exact CEGIS: 520 cuts, HiGHS). Without a distance box the packing-cut CEGIS diverges (candidates with thousands of packings).
+- Open: whether any 8-agent instance with ratio below 26/27 exists (any m, any T). Not tried yet: skeletons other than the prism (five cubic graphs on 8 vertices; any placement of subdivision vertices other than the one inherited from 7×17), two subdivisions per step, B = T − 2 with larger T, three agent types, non-grid structures. A staged search over cubic skeletons is about to start.
+
+## 5. Other open items
+T-minimality and m-minimality of each instance (windows 5×12, 6×13, 6×14, 7×13–16 unexplored); Gap(3,11) (machine ready); a proof of anything for general n; formal verification of the certificates (Lean); whether the family's ratio has a limit or the record 26/27 is where the two-type grid idea stops.
+
+## 6. Prior art check (2026-09-02)
+No upper bound below 39/40 posted since 2021 (39/40 restated as current through August 2026); the fractions 29/30, 28/29, 27/28, 26/27 do not occur in the MMS literature; no prism/subdivision family found (the two-type row/column grid with equal row and column sums is not new — it is FST's own general construction, Theorem 4 of arXiv:2104.04977, refined in their Theorem 14; new here is the sparse prism realisation, the compact instances, the ratios, f(4) = 10 and the certificates — correction of 2026-09-04, see `kit/REVIEW_GPT6_2026-09-04.md`); "two types of agents" is a known class where MMS can fail (Shahkar–Garg, IJCAI 2025) but no instance family was published. Not checked: Google Scholar / Semantic Scholar citation lists (tooling limits). Community-accepted computer-assisted formats: Lean 4 (Schwerdtfeger 2026), SAT (Akrami et al. 2026), exhaustive search.
+
+## 7. How the work is organised
+Instances were found by GPT-5.6 Pro in searches specified and audited by the author with Claude; every claim was re-verified with separately written code before being trusted. Each result has a provenance archive (scripts, seeds, logs, invocation records, replays; SHA-256 pinned). Public repository: github.com/andrewchatgptkz-ops/mms-small-counterexamples (being updated). Author: Andrey Alexandrov, not a professional mathematician; the field has not been contacted yet.
+
+## 8. If you decide to compute anything: environment lessons (hard-won, all confirmed by failures)
+- The ChatGPT sandbox is ephemeral and can be REPLACED WHOLESALE between tool calls, filesystem included. nohup / setsid / tmux / a supervisor do not survive it (canary-tested). Only /mnt/data and the chat attachments persist. Workaround: write a compressed snapshot of the working tree to /mnt/data after every stage, restore from the newest snapshot at the start of every tool call that needs it, keep all intermediate files atomic, make every enumeration sharded and resumable from a checkpoint file.
+- A single response has a hard reasoning budget: two long runs died with "reasoning failed" after hours and left NOTHING on disk because the first snapshot had not been written yet. Workaround: one prompt = one stage; the first action of a stage is a snapshot, the last action is a snapshot; the newest snapshot must always be a complete deliverable (REPORT.md, REPRODUCE.md, MANIFEST.sha256). Use size-based guards (cut counts, iteration counts), not time.
+- Attachments sometimes do not mount. Workaround: the prompt names a file and a test (run verify_certificate.py, expect "ALL CERTIFICATES VALID"); if the file is not visible, say so and stop rather than reconstructing it from memory.
+- DNS and pip are often unavailable (no Z3). HiGHS via SciPy is present and sufficient for all MILP/LP work so far; C++ (g++) and NumPy/Numba are available. About 5 CPU threads.
+- The chat interface does not render every tool call; code that exists only in a tool call can be lost (the 4×11 search code was). Workaround: every producing script is written to disk verbatim with its seeds, its log, and its exact shell invocation recorded BEFORE the worker starts; every result must be replayable bitwise from the archive.
+- Verification scale: subset DP is n·3^m (m = 19 in seconds, m = 20 in minutes); literal n^m enumeration is feasible up to 6^15 (sharded); 7^17 and beyond are replaced by two independent DPs plus the packing certificate. Packing certificates via inclusion-minimal sets and a zeta transform over 2^m masks handle m ≤ 20 easily.
+- Acceptance rules we apply to every claimed instance: profile is not "all but one agent identical" (Feige–Norkin), no single good ≥ T, witness partitions checked arithmetically, exact MMS and exact max-min from separately written code, packing certificate zero at q = T and positive at q = B, and the direction of bound comparisons stated explicitly (a smaller fraction is a stronger upper bound — we got this wrong once).

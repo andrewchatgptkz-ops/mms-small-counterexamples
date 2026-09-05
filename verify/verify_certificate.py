@@ -52,6 +52,12 @@ INSTANCES = {
       gstar=1,
       caseR=dict(w=[5,11,6,7,3,12,6,17,7,3,12,17,6,11,11,17,6], alpha=22, beta=23),
       caseC=dict(w=[17,30,14,24,6,36,14,52,24,6,36,53,13,30,36,51,15], alpha=66, beta=65)),
+  '4x12_T60': dict(a=2, b=2, T=60,
+      R=[44,16,8,42,10,34,1,24,1,14,14,32],
+      C=[46,19,11,40,6,37,1,20,1,12,13,34],
+      gstar=3,
+      caseR=dict(w=[16,7,3,15,4,12,1,8,1,5,6,11], alpha=22, beta=23),
+      caseC=dict(w=[20,10,5,18,4,16,1,12,1,8,8,14], alpha=30, beta=29)),
 }
 
 # Chain ("universal") certificates: ONE weight vector serves n = 5, 6, 7 (first m entries), same branching good g1.

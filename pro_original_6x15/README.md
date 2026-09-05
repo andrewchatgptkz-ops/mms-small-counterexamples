@@ -1,0 +1,3 @@
+# Original search archive for the 6x15 instance (unmodified)
+
+`mms6_6x15_T28_ratio27of28_20260901T163946Z.tar.zst` is the complete, unmodified archive of the GPT-5.6 Pro session of 1 September 2026 that produced the 6-agent, 15-good instance (SHA-256 in `SHA256SUMS`). Contents, verbatim: both producing sources (deterministic exhaustive loops over all 13 edges × 28×28 subdivision parameters × both splits of the 5×13 instance — no seeds needed), 45 shell-invocation records written before each worker started, the inventory of the 13 continuations, the intermediate T = 29 instance, bitwise replays, three verifiers, the 1296 shards of the literal 6^15 enumeration with per-shard SHA-256, the 5×13 archive verbatim, MANIFEST.sha256 and REPRODUCE.md.
