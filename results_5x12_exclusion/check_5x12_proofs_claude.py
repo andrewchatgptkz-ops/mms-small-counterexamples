@@ -4,7 +4,8 @@ import gzip, json, sys
 from fractions import Fraction as F
 from itertools import combinations
 b=json.load(gzip.open(sys.argv[1],'rt'))
-pats, states = b['patterns'], b['states']
+pats = b['patterns'] + b.get('auxiliary_patterns',[]); states = dict(b['states']); states.update(b.get('auxiliary_states',{}))
+assert not b.get('pending') and not b.get('auxiliary_pending')
 M=12
 def sub(m,big): return m & big == m
 def implied(assume, need):   # every needed losing (t,m) is a subset of some assumed losing set of the same type
@@ -83,4 +84,4 @@ for p in pats:
     assert seen=={(hc,hr) for hc in range(5) for hr in combinations(range(5),2)}
 print('patterns',len(pats),'direct',sum(1 for p in pats if p['direct_packings']),'proved',sum(1 for p in pats if not p['direct_packings']),
       'nodes checked',tot_nodes,'dual leaves',tot_duals,'branch nodes',tot_branch)
-print('ALL 37 EXCLUSIONS RE-VERIFIED (independent checker)')
+print(f'ALL {len(pats)} EXCLUSIONS RE-VERIFIED (independent checker)')

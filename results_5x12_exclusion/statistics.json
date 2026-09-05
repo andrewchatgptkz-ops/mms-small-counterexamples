@@ -1,190 +1,926 @@
 {
-  "compressed_bytes": 1246433,
+  "auxiliary_duals": 928,
+  "auxiliary_nodes": 40157,
+  "auxiliary_pending": 0,
+  "auxiliary_proofs": 41,
+  "branching_patterns": 152,
+  "compressed_bytes": 4916873,
   "patterns": [
     {
-      "branch_nodes": 127,
       "duals": 13,
       "nodes": 262,
       "pattern": "P11",
-      "symmetry_nodes": 0
+      "roots": 50
     },
     {
-      "branch_nodes": 77,
       "duals": 13,
       "nodes": 190,
       "pattern": "P12",
-      "symmetry_nodes": 23
+      "roots": 50
     },
     {
-      "branch_nodes": 205,
       "duals": 27,
       "nodes": 411,
       "pattern": "P13",
-      "symmetry_nodes": 0
+      "roots": 50
     },
     {
-      "branch_nodes": 340,
       "duals": 35,
       "nodes": 566,
       "pattern": "P14",
-      "symmetry_nodes": 18
+      "roots": 50
     },
     {
-      "branch_nodes": 118,
       "duals": 9,
       "nodes": 204,
       "pattern": "P15",
-      "symmetry_nodes": 10
+      "roots": 50
     },
     {
-      "branch_nodes": 158,
       "duals": 5,
       "nodes": 230,
       "pattern": "P16",
-      "symmetry_nodes": 44
+      "roots": 50
     },
     {
-      "branch_nodes": 4259,
       "duals": 80,
       "nodes": 8341,
       "pattern": "P17",
-      "symmetry_nodes": 19
+      "roots": 50
     },
     {
-      "branch_nodes": 4541,
       "duals": 104,
       "nodes": 11100,
       "pattern": "P18",
-      "symmetry_nodes": 19
+      "roots": 50
     },
     {
-      "branch_nodes": 433,
       "duals": 20,
       "nodes": 718,
       "pattern": "P19",
-      "symmetry_nodes": 19
+      "roots": 50
     },
     {
-      "branch_nodes": 926,
       "duals": 47,
       "nodes": 1984,
       "pattern": "P20",
-      "symmetry_nodes": 22
+      "roots": 50
     },
     {
-      "branch_nodes": 3527,
       "duals": 56,
       "nodes": 6639,
       "pattern": "P21",
-      "symmetry_nodes": 23
+      "roots": 50
     },
     {
-      "branch_nodes": 196,
       "duals": 13,
       "nodes": 296,
       "pattern": "P22",
-      "symmetry_nodes": 0
+      "roots": 50
     },
     {
-      "branch_nodes": 1210,
       "duals": 23,
       "nodes": 2383,
       "pattern": "P23",
-      "symmetry_nodes": 24
+      "roots": 50
     },
     {
-      "branch_nodes": 4779,
       "duals": 59,
       "nodes": 9265,
       "pattern": "P24",
-      "symmetry_nodes": 0
+      "roots": 50
     },
     {
-      "branch_nodes": 211,
       "duals": 28,
       "nodes": 422,
       "pattern": "P25",
-      "symmetry_nodes": 24
+      "roots": 50
     },
     {
-      "branch_nodes": 5772,
       "duals": 81,
       "nodes": 11286,
       "pattern": "P26",
-      "symmetry_nodes": 0
+      "roots": 50
     },
     {
-      "branch_nodes": 4005,
       "duals": 48,
       "nodes": 8521,
       "pattern": "P27",
-      "symmetry_nodes": 24
+      "roots": 50
     },
     {
-      "branch_nodes": 1371,
       "duals": 53,
       "nodes": 2683,
       "pattern": "P28",
-      "symmetry_nodes": 0
+      "roots": 50
     },
     {
-      "branch_nodes": 337,
       "duals": 17,
       "nodes": 684,
       "pattern": "P29",
-      "symmetry_nodes": 31
+      "roots": 50
     },
     {
-      "branch_nodes": 2785,
       "duals": 19,
       "nodes": 5526,
       "pattern": "P30",
-      "symmetry_nodes": 24
+      "roots": 50
     },
     {
-      "branch_nodes": 158,
       "duals": 22,
       "nodes": 288,
       "pattern": "P31",
-      "symmetry_nodes": 0
+      "roots": 50
     },
     {
-      "branch_nodes": 2121,
       "duals": 64,
       "nodes": 4418,
       "pattern": "P32",
-      "symmetry_nodes": 0
+      "roots": 50
     },
     {
-      "branch_nodes": 1973,
       "duals": 53,
       "nodes": 5486,
       "pattern": "P33",
-      "symmetry_nodes": 31
+      "roots": 50
     },
     {
-      "branch_nodes": 733,
       "duals": 32,
       "nodes": 1455,
       "pattern": "P34",
-      "symmetry_nodes": 20
+      "roots": 50
     },
     {
-      "branch_nodes": 800,
       "duals": 42,
       "nodes": 1582,
       "pattern": "P35",
-      "symmetry_nodes": 0
+      "roots": 50
     },
     {
-      "branch_nodes": 301,
       "duals": 21,
       "nodes": 600,
       "pattern": "P36",
-      "symmetry_nodes": 28
+      "roots": 50
+    },
+    {
+      "duals": 5,
+      "nodes": 54,
+      "pattern": "MC066",
+      "roots": 50
+    },
+    {
+      "duals": 4,
+      "nodes": 90,
+      "pattern": "MC067",
+      "roots": 50
+    },
+    {
+      "duals": 13,
+      "nodes": 142,
+      "pattern": "MC068",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MC069",
+      "roots": 50
+    },
+    {
+      "duals": 10,
+      "nodes": 129,
+      "pattern": "MC070",
+      "roots": 50
+    },
+    {
+      "duals": 10,
+      "nodes": 168,
+      "pattern": "MC071",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 103,
+      "pattern": "MC072",
+      "roots": 50
+    },
+    {
+      "duals": 11,
+      "nodes": 136,
+      "pattern": "MC073",
+      "roots": 50
+    },
+    {
+      "duals": 10,
+      "nodes": 177,
+      "pattern": "MC074",
+      "roots": 50
+    },
+    {
+      "duals": 4,
+      "nodes": 74,
+      "pattern": "MC075",
+      "roots": 50
+    },
+    {
+      "duals": 14,
+      "nodes": 319,
+      "pattern": "MC076",
+      "roots": 50
+    },
+    {
+      "duals": 5,
+      "nodes": 77,
+      "pattern": "MC077",
+      "roots": 50
+    },
+    {
+      "duals": 7,
+      "nodes": 117,
+      "pattern": "MC078",
+      "roots": 50
+    },
+    {
+      "duals": 21,
+      "nodes": 214,
+      "pattern": "MC079",
+      "roots": 50
+    },
+    {
+      "duals": 8,
+      "nodes": 123,
+      "pattern": "MC080",
+      "roots": 50
+    },
+    {
+      "duals": 8,
+      "nodes": 121,
+      "pattern": "MC081",
+      "roots": 50
+    },
+    {
+      "duals": 5,
+      "nodes": 125,
+      "pattern": "MC082",
+      "roots": 50
+    },
+    {
+      "duals": 7,
+      "nodes": 143,
+      "pattern": "MC083",
+      "roots": 50
+    },
+    {
+      "duals": 6,
+      "nodes": 128,
+      "pattern": "MC084",
+      "roots": 50
+    },
+    {
+      "duals": 4,
+      "nodes": 90,
+      "pattern": "MC088",
+      "roots": 50
+    },
+    {
+      "duals": 7,
+      "nodes": 84,
+      "pattern": "MC113",
+      "roots": 50
+    },
+    {
+      "duals": 13,
+      "nodes": 210,
+      "pattern": "MC114",
+      "roots": 50
+    },
+    {
+      "duals": 24,
+      "nodes": 203,
+      "pattern": "MC115",
+      "roots": 50
+    },
+    {
+      "duals": 20,
+      "nodes": 202,
+      "pattern": "MC116",
+      "roots": 50
+    },
+    {
+      "duals": 17,
+      "nodes": 178,
+      "pattern": "MC117",
+      "roots": 50
+    },
+    {
+      "duals": 15,
+      "nodes": 168,
+      "pattern": "MC118",
+      "roots": 50
+    },
+    {
+      "duals": 8,
+      "nodes": 90,
+      "pattern": "MC119",
+      "roots": 50
+    },
+    {
+      "duals": 17,
+      "nodes": 219,
+      "pattern": "MC120",
+      "roots": 50
+    },
+    {
+      "duals": 31,
+      "nodes": 308,
+      "pattern": "MC121",
+      "roots": 50
+    },
+    {
+      "duals": 16,
+      "nodes": 206,
+      "pattern": "MC122",
+      "roots": 50
+    },
+    {
+      "duals": 8,
+      "nodes": 141,
+      "pattern": "MC123",
+      "roots": 50
+    },
+    {
+      "duals": 6,
+      "nodes": 99,
+      "pattern": "MC124",
+      "roots": 50
+    },
+    {
+      "duals": 37,
+      "nodes": 3833,
+      "pattern": "MC125",
+      "roots": 50
+    },
+    {
+      "duals": 25,
+      "nodes": 806,
+      "pattern": "MC126",
+      "roots": 50
+    },
+    {
+      "duals": 20,
+      "nodes": 2215,
+      "pattern": "MC127",
+      "roots": 50
+    },
+    {
+      "duals": 25,
+      "nodes": 524,
+      "pattern": "MC128",
+      "roots": 50
+    },
+    {
+      "duals": 15,
+      "nodes": 208,
+      "pattern": "MC129",
+      "roots": 50
+    },
+    {
+      "duals": 15,
+      "nodes": 338,
+      "pattern": "MC130",
+      "roots": 50
+    },
+    {
+      "duals": 20,
+      "nodes": 930,
+      "pattern": "MC131",
+      "roots": 50
+    },
+    {
+      "duals": 5,
+      "nodes": 104,
+      "pattern": "MC132",
+      "roots": 50
+    },
+    {
+      "duals": 11,
+      "nodes": 210,
+      "pattern": "MC133",
+      "roots": 50
+    },
+    {
+      "duals": 20,
+      "nodes": 1716,
+      "pattern": "MC134",
+      "roots": 50
+    },
+    {
+      "duals": 38,
+      "nodes": 521,
+      "pattern": "MC135",
+      "roots": 50
+    },
+    {
+      "duals": 23,
+      "nodes": 1417,
+      "pattern": "MC136",
+      "roots": 50
+    },
+    {
+      "duals": 25,
+      "nodes": 819,
+      "pattern": "MC137",
+      "roots": 50
+    },
+    {
+      "duals": 41,
+      "nodes": 722,
+      "pattern": "MC138",
+      "roots": 50
+    },
+    {
+      "duals": 13,
+      "nodes": 219,
+      "pattern": "MC139",
+      "roots": 50
+    },
+    {
+      "duals": 37,
+      "nodes": 1730,
+      "pattern": "MC140",
+      "roots": 50
+    },
+    {
+      "duals": 38,
+      "nodes": 4095,
+      "pattern": "MC141",
+      "roots": 50
+    },
+    {
+      "duals": 38,
+      "nodes": 1674,
+      "pattern": "MC142",
+      "roots": 50
+    },
+    {
+      "duals": 9,
+      "nodes": 148,
+      "pattern": "MC143",
+      "roots": 50
+    },
+    {
+      "duals": 20,
+      "nodes": 326,
+      "pattern": "MC144",
+      "roots": 50
+    },
+    {
+      "duals": 38,
+      "nodes": 7654,
+      "pattern": "MC145",
+      "roots": 50
+    },
+    {
+      "duals": 17,
+      "nodes": 714,
+      "pattern": "MC146",
+      "roots": 50
+    },
+    {
+      "duals": 59,
+      "nodes": 9600,
+      "pattern": "MC147",
+      "roots": 50
+    },
+    {
+      "duals": 17,
+      "nodes": 247,
+      "pattern": "MC148",
+      "roots": 50
+    },
+    {
+      "duals": 13,
+      "nodes": 180,
+      "pattern": "MC149",
+      "roots": 50
+    },
+    {
+      "duals": 17,
+      "nodes": 196,
+      "pattern": "MC150",
+      "roots": 50
+    },
+    {
+      "duals": 10,
+      "nodes": 171,
+      "pattern": "MC151",
+      "roots": 50
+    },
+    {
+      "duals": 17,
+      "nodes": 249,
+      "pattern": "MC153",
+      "roots": 50
+    },
+    {
+      "duals": 66,
+      "nodes": 8357,
+      "pattern": "MC154",
+      "roots": 50
+    },
+    {
+      "duals": 35,
+      "nodes": 1621,
+      "pattern": "MC155",
+      "roots": 50
+    },
+    {
+      "duals": 21,
+      "nodes": 465,
+      "pattern": "MC156",
+      "roots": 50
+    },
+    {
+      "duals": 35,
+      "nodes": 800,
+      "pattern": "MC157",
+      "roots": 50
+    },
+    {
+      "duals": 19,
+      "nodes": 428,
+      "pattern": "MC158",
+      "roots": 50
+    },
+    {
+      "duals": 21,
+      "nodes": 199,
+      "pattern": "MC160",
+      "roots": 50
+    },
+    {
+      "duals": 26,
+      "nodes": 355,
+      "pattern": "MC161",
+      "roots": 50
+    },
+    {
+      "duals": 44,
+      "nodes": 1920,
+      "pattern": "MC162",
+      "roots": 50
+    },
+    {
+      "duals": 5,
+      "nodes": 145,
+      "pattern": "MC163",
+      "roots": 50
+    },
+    {
+      "duals": 47,
+      "nodes": 6784,
+      "pattern": "MC164",
+      "roots": 50
+    },
+    {
+      "duals": 5,
+      "nodes": 120,
+      "pattern": "MC175",
+      "roots": 50
+    },
+    {
+      "duals": 33,
+      "nodes": 324,
+      "pattern": "MC176",
+      "roots": 50
+    },
+    {
+      "duals": 22,
+      "nodes": 158,
+      "pattern": "MC177",
+      "roots": 50
+    },
+    {
+      "duals": 59,
+      "nodes": 6309,
+      "pattern": "MC178",
+      "roots": 50
+    },
+    {
+      "duals": 18,
+      "nodes": 833,
+      "pattern": "MC179",
+      "roots": 50
+    },
+    {
+      "duals": 14,
+      "nodes": 387,
+      "pattern": "MC180",
+      "roots": 50
+    },
+    {
+      "duals": 34,
+      "nodes": 918,
+      "pattern": "MC181",
+      "roots": 50
+    },
+    {
+      "duals": 53,
+      "nodes": 3647,
+      "pattern": "MC182",
+      "roots": 50
+    },
+    {
+      "duals": 8,
+      "nodes": 127,
+      "pattern": "MC183",
+      "roots": 50
+    },
+    {
+      "duals": 16,
+      "nodes": 247,
+      "pattern": "MC184",
+      "roots": 50
+    },
+    {
+      "duals": 24,
+      "nodes": 449,
+      "pattern": "MC185",
+      "roots": 50
+    },
+    {
+      "duals": 84,
+      "nodes": 7611,
+      "pattern": "MC186",
+      "roots": 50
+    },
+    {
+      "duals": 27,
+      "nodes": 562,
+      "pattern": "MC187",
+      "roots": 50
+    },
+    {
+      "duals": 34,
+      "nodes": 1371,
+      "pattern": "MC188",
+      "roots": 50
+    },
+    {
+      "duals": 17,
+      "nodes": 242,
+      "pattern": "MC189",
+      "roots": 50
+    },
+    {
+      "duals": 13,
+      "nodes": 133,
+      "pattern": "MC190",
+      "roots": 50
+    },
+    {
+      "duals": 47,
+      "nodes": 1732,
+      "pattern": "MC191",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD117",
+      "roots": 50
+    },
+    {
+      "duals": 2,
+      "nodes": 50,
+      "pattern": "MD119",
+      "roots": 50
+    },
+    {
+      "duals": 2,
+      "nodes": 50,
+      "pattern": "MD120",
+      "roots": 50
+    },
+    {
+      "duals": 2,
+      "nodes": 50,
+      "pattern": "MD122",
+      "roots": 50
+    },
+    {
+      "duals": 2,
+      "nodes": 50,
+      "pattern": "MD127",
+      "roots": 50
+    },
+    {
+      "duals": 4,
+      "nodes": 50,
+      "pattern": "MD162",
+      "roots": 50
+    },
+    {
+      "duals": 4,
+      "nodes": 50,
+      "pattern": "MD163",
+      "roots": 50
+    },
+    {
+      "duals": 4,
+      "nodes": 50,
+      "pattern": "MD164",
+      "roots": 50
+    },
+    {
+      "duals": 4,
+      "nodes": 50,
+      "pattern": "MD165",
+      "roots": 50
+    },
+    {
+      "duals": 4,
+      "nodes": 50,
+      "pattern": "MD168",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD171",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD172",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD173",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD174",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD175",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD176",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD177",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD178",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD179",
+      "roots": 50
+    },
+    {
+      "duals": 4,
+      "nodes": 50,
+      "pattern": "MD180",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD185",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD186",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD187",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD190",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD192",
+      "roots": 50
+    },
+    {
+      "duals": 4,
+      "nodes": 50,
+      "pattern": "MD199",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD202",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD203",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD206",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD210",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD211",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD214",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD217",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD225",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD226",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD227",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD228",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD229",
+      "roots": 50
+    },
+    {
+      "duals": 3,
+      "nodes": 50,
+      "pattern": "MD230",
+      "roots": 50
     }
   ],
-  "total_dual_leaves": 984,
-  "total_proof_nodes": 85540,
-  "uncompressed_bytes": 23753134
+  "pending_patterns": 0,
+  "total_duals": 2934,
+  "total_nodes": 179988,
+  "uncompressed_bytes": 60899782
 }

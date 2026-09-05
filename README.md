@@ -35,7 +35,7 @@ All the new instances follow the two-type row/column paradigm of Feige–Sapir�
   - `verify_subsetdp.cpp` — literal enumeration of all n^m allocations (for the small instances; 6^15 ≈ 4.7·10¹¹ was done in shards, see `PROVENANCE.md`).
   - `run_all.sh` — runs everything (about a minute).
 - `certificates/` — packing counts and weight certificates, with the verification recipe.
-- `results_5x12_exclusion/` — the exact exclusion of two-type 5×12 grid counterexamples (proof bundle + two checkers).
+- `results_5x12_exclusion/` — the two-type 5×12 theorem: reductions (`THEOREM.md`), proof bundle, producer checker, independent checker, summary (`NOTE.md`).
 - `FAMILY.md` — the structure of the family, the chain certificate, the rigidity facts, and the status of n = 8.
 - `PROVENANCE.md` — who found what and when, archive hashes, what was lost, what is not established.
 - `pro_original*/` — the unmodified search archives of the GPT-5.6 Pro sessions (4×11 package; 5×13, 6×15, 7×17 `.tar.zst` with SHA-256).
@@ -53,7 +53,7 @@ For n = 5, 6, 7 one weight vector serves all three instances (first m entries): 
 ## Negative results (exact)
 
 - **7×17 is locally optimal in ratio** (2026-09-05): no first-order perturbation with a depth-≤2 certificate (all 17 branching goods, all 136 pairs), no integer perturbation K·v + h with |h| ≤ 4, K ≤ 8, row/column sums 0 or −1 (42 boxes UNSAT), and no plain decrement (0 of the 27 648 admissible patterns; 20 explicit packings cover them all). Any improvement on 26/27 must come from a different graph or a different n.
-- **No two-type 5-agent, 12-good counterexample on a simple connected grid** (2026-09-05): complete allocation-branching proof over all 37 oriented pattern classes, positive rational (indeed real) valuations, any T; two independent solver-free checkers in `results_5x12_exclusion/`. Not covered: multi-edge or disconnected grids, the 1+4 split, three or more types — so f(5) ∈ {11, 12} is still open.
+- **Theorem (computer-assisted): every 5-agent, 12-good instance with at most two valuation types has an MMS allocation** (2026-09-05). Elementary reductions (normalisation, merging parallel goods + Hummel's n+6 theorem, singleton witnesses) plus complete allocation-branching proofs with exact rational dual leaves for 534 incidence classes; two independent solver-free checkers in `results_5x12_exclusion/`. So the two-type f(5) is exactly 12, and any 5×12 counterexample needs three or more types; f(5) ∈ {11, 12} stays open.
 
 ## What is not established
 
