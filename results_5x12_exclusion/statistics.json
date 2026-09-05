@@ -1,0 +1,190 @@
+{
+  "compressed_bytes": 1246433,
+  "patterns": [
+    {
+      "branch_nodes": 127,
+      "duals": 13,
+      "nodes": 262,
+      "pattern": "P11",
+      "symmetry_nodes": 0
+    },
+    {
+      "branch_nodes": 77,
+      "duals": 13,
+      "nodes": 190,
+      "pattern": "P12",
+      "symmetry_nodes": 23
+    },
+    {
+      "branch_nodes": 205,
+      "duals": 27,
+      "nodes": 411,
+      "pattern": "P13",
+      "symmetry_nodes": 0
+    },
+    {
+      "branch_nodes": 340,
+      "duals": 35,
+      "nodes": 566,
+      "pattern": "P14",
+      "symmetry_nodes": 18
+    },
+    {
+      "branch_nodes": 118,
+      "duals": 9,
+      "nodes": 204,
+      "pattern": "P15",
+      "symmetry_nodes": 10
+    },
+    {
+      "branch_nodes": 158,
+      "duals": 5,
+      "nodes": 230,
+      "pattern": "P16",
+      "symmetry_nodes": 44
+    },
+    {
+      "branch_nodes": 4259,
+      "duals": 80,
+      "nodes": 8341,
+      "pattern": "P17",
+      "symmetry_nodes": 19
+    },
+    {
+      "branch_nodes": 4541,
+      "duals": 104,
+      "nodes": 11100,
+      "pattern": "P18",
+      "symmetry_nodes": 19
+    },
+    {
+      "branch_nodes": 433,
+      "duals": 20,
+      "nodes": 718,
+      "pattern": "P19",
+      "symmetry_nodes": 19
+    },
+    {
+      "branch_nodes": 926,
+      "duals": 47,
+      "nodes": 1984,
+      "pattern": "P20",
+      "symmetry_nodes": 22
+    },
+    {
+      "branch_nodes": 3527,
+      "duals": 56,
+      "nodes": 6639,
+      "pattern": "P21",
+      "symmetry_nodes": 23
+    },
+    {
+      "branch_nodes": 196,
+      "duals": 13,
+      "nodes": 296,
+      "pattern": "P22",
+      "symmetry_nodes": 0
+    },
+    {
+      "branch_nodes": 1210,
+      "duals": 23,
+      "nodes": 2383,
+      "pattern": "P23",
+      "symmetry_nodes": 24
+    },
+    {
+      "branch_nodes": 4779,
+      "duals": 59,
+      "nodes": 9265,
+      "pattern": "P24",
+      "symmetry_nodes": 0
+    },
+    {
+      "branch_nodes": 211,
+      "duals": 28,
+      "nodes": 422,
+      "pattern": "P25",
+      "symmetry_nodes": 24
+    },
+    {
+      "branch_nodes": 5772,
+      "duals": 81,
+      "nodes": 11286,
+      "pattern": "P26",
+      "symmetry_nodes": 0
+    },
+    {
+      "branch_nodes": 4005,
+      "duals": 48,
+      "nodes": 8521,
+      "pattern": "P27",
+      "symmetry_nodes": 24
+    },
+    {
+      "branch_nodes": 1371,
+      "duals": 53,
+      "nodes": 2683,
+      "pattern": "P28",
+      "symmetry_nodes": 0
+    },
+    {
+      "branch_nodes": 337,
+      "duals": 17,
+      "nodes": 684,
+      "pattern": "P29",
+      "symmetry_nodes": 31
+    },
+    {
+      "branch_nodes": 2785,
+      "duals": 19,
+      "nodes": 5526,
+      "pattern": "P30",
+      "symmetry_nodes": 24
+    },
+    {
+      "branch_nodes": 158,
+      "duals": 22,
+      "nodes": 288,
+      "pattern": "P31",
+      "symmetry_nodes": 0
+    },
+    {
+      "branch_nodes": 2121,
+      "duals": 64,
+      "nodes": 4418,
+      "pattern": "P32",
+      "symmetry_nodes": 0
+    },
+    {
+      "branch_nodes": 1973,
+      "duals": 53,
+      "nodes": 5486,
+      "pattern": "P33",
+      "symmetry_nodes": 31
+    },
+    {
+      "branch_nodes": 733,
+      "duals": 32,
+      "nodes": 1455,
+      "pattern": "P34",
+      "symmetry_nodes": 20
+    },
+    {
+      "branch_nodes": 800,
+      "duals": 42,
+      "nodes": 1582,
+      "pattern": "P35",
+      "symmetry_nodes": 0
+    },
+    {
+      "branch_nodes": 301,
+      "duals": 21,
+      "nodes": 600,
+      "pattern": "P36",
+      "symmetry_nodes": 28
+    }
+  ],
+  "total_dual_leaves": 984,
+  "total_proof_nodes": 85540,
+  "uncompressed_bytes": 23753134
+}

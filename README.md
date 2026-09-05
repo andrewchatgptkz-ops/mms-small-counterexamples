@@ -35,6 +35,7 @@ All the new instances follow the two-type row/column paradigm of Feige–Sapir�
   - `verify_subsetdp.cpp` — literal enumeration of all n^m allocations (for the small instances; 6^15 ≈ 4.7·10¹¹ was done in shards, see `PROVENANCE.md`).
   - `run_all.sh` — runs everything (about a minute).
 - `certificates/` — packing counts and weight certificates, with the verification recipe.
+- `results_5x12_exclusion/` — the exact exclusion of two-type 5×12 grid counterexamples (proof bundle + two checkers).
 - `FAMILY.md` — the structure of the family, the chain certificate, the rigidity facts, and the status of n = 8.
 - `PROVENANCE.md` — who found what and when, archive hashes, what was lost, what is not established.
 - `pro_original*/` — the unmodified search archives of the GPT-5.6 Pro sessions (4×11 package; 5×13, 6×15, 7×17 `.tar.zst` with SHA-256).
@@ -48,6 +49,11 @@ For each instance fix one good g* (a good of the "soft" column, the only column 
 For n = 5, 6, 7 one weight vector serves all three instances (first m entries): case R with w = 5 11 6 7 3 12 6 17 7 3 12 17 6 11 11 17 6, α = 22, β = 23; the margin is exactly 1 each time. This "chain certificate" does not extend to n = 8 (proved), see `FAMILY.md`.
 
 **Depth-2 certificate (8×19).** Branch on two goods (g1, g2); each of the four leaves RR, RC, CR, CC (which type receives g1, which receives g2) has its own weights and quotas with the same three conditions. The 8-agent instance (T = 104, best minimum 103) was *synthesised* from such a certificate: starting from the best T = 26 profile on the g11-subdivision of 7×17 (which admits exactly two packings), an MILP chose which of the subsets tied at value 26 become losing, and the instance is 4·profile + (h_R, h_C) with integer direction vectors of zero row/column sum. For every integer K ≥ 4, K·profile + (h_R, h_C) has MMS 26K and best minimum 26K − 1; on the rational line profile + ε·(h_R, h_C) the best minimum is max(26 − ε, 25 + 3ε) for 0 ≤ ε ≤ 1/3. So the earlier negative results at T = 26 (empty L1 balls, UNSAT boxes) are statements about the integer lattice at that T, not about the neighbourhood of the profile.
+
+## Negative results (exact)
+
+- **7×17 is locally optimal in ratio** (2026-09-05): no first-order perturbation with a depth-≤2 certificate (all 17 branching goods, all 136 pairs), no integer perturbation K·v + h with |h| ≤ 4, K ≤ 8, row/column sums 0 or −1 (42 boxes UNSAT), and no plain decrement (0 of the 27 648 admissible patterns; 20 explicit packings cover them all). Any improvement on 26/27 must come from a different graph or a different n.
+- **No two-type 5-agent, 12-good counterexample on a simple connected grid** (2026-09-05): complete allocation-branching proof over all 37 oriented pattern classes, positive rational (indeed real) valuations, any T; two independent solver-free checkers in `results_5x12_exclusion/`. Not covered: multi-edge or disconnected grids, the 1+4 split, three or more types — so f(5) ∈ {11, 12} is still open.
 
 ## What is not established
 

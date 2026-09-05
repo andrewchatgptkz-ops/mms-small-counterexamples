@@ -1,0 +1,7 @@
+# No two-type 5-agent / 12-good counterexample on simple connected grids (GPT-6 Pro, 2026-09-05; re-checked by Claude)
+
+Claim: for every connected simple 5×5 incidence grid with 12 goods and all row/column degrees ≥ 2, and all positive (rational or real) valuations R, C with every R-row and every C-column summing to 1, an allocation giving ≥ 1 to two R-agents and three C-agents exists (3+2 by transposition). So no counterexample of that shape exists for any T.
+
+Proof object: `proofs.json.gz` — 37 oriented pattern classes (24 up to transposition); 11 have value-independent allocations (two whole rows + three whole columns, disjoint); 26 have complete allocation-branching proofs (50 hard-row/hard-column cases each; 85 540 nodes, 984 exact rational dual leaves). `verify.py` is the producer's solver-free checker (enumerates the class itself; ~7 s). `check_5x12_proofs_claude.py` is an independent re-implementation of the checker by Claude (same counts). Claude also re-enumerated the class independently (241 800 admissible 0/1 matrices → 37 oriented classes → 24).
+
+Not covered: grids with several goods in one cell (multi-edges), disconnected grids, the 1+4 split, three or more agent types. f(5) is NOT settled by this. Session archive: `P16S2_final.tar.gz`, sha256 e2c08f6637d7adbebeedd52d2dc2769095eb14be2b7dffb774b4fd005d6ab840 (21 MB, kept off-repository; hash pinned here and in PROVENANCE.md).

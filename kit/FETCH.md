@@ -16,6 +16,7 @@ If `git` cannot reach GitHub from the sandbox, try `curl -L https://github.com/a
 - `pro_original_5x13/` — the 5×13 search machine (pattern enumeration for 5×5 grids, stochastic search with exact packing score, CEGIS on HiGHS), archive `.tar.zst`; unpack with `zstd -d` or Python `zstandard`.
 - `pro_original_6x15/`, `pro_original_7x17/` — the 6×15 and 7×17 archives (the 7×17 one contains the packing-oracle CEGIS with indicator formulation, invocation-record tooling, and the 6×15 archive verbatim).
 - `pro_original/` — the 4×11 package (search code reconstructed, verifiers original).
+- `results_5x12_exclusion/` — proof bundle + two checkers for "no two-type 5×12 on simple connected grids".
 - `pro_original_8x19_theory/` — the GPT-6 Pro theory session snapshot (gadget signatures, depth-2 certificate synthesis, the 8×19 T = 104 instance, invariants).
 
 ## Rules that apply to every computation (from §8 of the dossier)
