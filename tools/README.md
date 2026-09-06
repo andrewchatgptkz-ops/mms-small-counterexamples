@@ -9,3 +9,4 @@ Python needs numpy/scipy (HiGHS) for the MILP scripts; the checkers are standard
 ## P15 stage-1 acceptance (2026-09-05)
 - `p15s1_enum7.cpp` — independent census of the rank-5 patterns (7×7, 18 goods, degrees 3^8 2^6): `./enum7 cubic` counts cubic graphs on 8 vertices; `./enum7 enum` enumerates all matrices with row sums (3,3,3,3,2,2,2), canonicalizes under row/column permutations and classifies each class (connected, simple cubic core, skeleton S1–S5, row-side core vertices, d33, direct-exclusion test, transpose); `./enum7 canon` canonicalizes matrices read from stdin (7 column masks per line).
 - `p15s1_score.cpp` — packing scorer for a R-agents + b C-agents: minimal winning bundles, disjoint tuples, union masks, distinct union-mask pairs and tuple pairs (stdin: `m q a b`, R values, C values).
+- `p15s1_bipcanon.cpp` — canonical key of a 7×7 pattern under all row and column permutations (used to find the 9 patterns that are the 7×17 graph plus one good).
